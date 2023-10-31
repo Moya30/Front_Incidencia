@@ -1,20 +1,20 @@
 import React from 'react'
 import axios from 'axios';
 
-export const AddUser = () => {
+async function AddUser (nombUsua,passUsua,nombPers,appaPers,apmaPers,dniPers,telfPers,emailPers,nombRol) {
     try {
 
-        const result = axios.post('http://incidencias-fiisi.up.railway.app/api/usuario',
+        const result = await axios.post('https://incidencias-fiisi.up.railway.app/api/usuario',
                 {
-                    // nombUsua,
-                    // passUsua,
-                    // nombPers,
-                    // appaPers,
-                    // apmaPers,
-                    // dniPers,
-                    // telfPers,
-                    // emailPers,
-                    // nombRol,
+                    nombUsua,
+                    passUsua,
+                    nombPers,
+                    appaPers,
+                    apmaPers,
+                    dniPers,
+                    telfPers,
+                    emailPers,
+                    nombRol,
                 }
         )
         
@@ -26,3 +26,4 @@ export const AddUser = () => {
         
     }
 }
+export default AddUser;
