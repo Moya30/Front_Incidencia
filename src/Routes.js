@@ -22,7 +22,7 @@ function AppRouter() {
                 <Route path="/404" element={<NotFound />}></Route>
                 <Route path="/form" element={<Form />}></Route>
             </Route>
-            <Route path="/profile" element={<User />}></Route>
+            <Route exact path="/profile" element={<User />}></Route>
                 <Route path="/auth" element={<GuestLayout />}>
                 <Route path="/auth/login" element={<Login />}></Route>
                 <Route path="/auth/register" element={<RegisterIndex />}></Route>
