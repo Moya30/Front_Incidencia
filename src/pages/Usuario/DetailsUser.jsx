@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from "../components/Navbar/Index";
 import { sidebarToggle } from '../utils/toggler';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFloppyDisk, faPhone } from '@fortawesome/free-solid-svg-icons';
 import AddUser from '../libs/AddUser'
 import { useNavigate } from "react-router-dom";
 export const DetailsUser = () => {

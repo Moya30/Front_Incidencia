@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Datatables from "../components/Datatables/Table";
-import TableCell from "../components/Datatables/TableCell";
+import Datatables from "../../components/Datatables/Table";
+import TableCell from "../../components/Datatables/TableCell";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil, faRemove } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,13 +22,16 @@ function UserTable({ loading, dataHeader, data, handleDelete }) {
             <p className="font-normal text-sm text-gray-500">{row.nombUsua}</p>
           </TableCell>
           <TableCell dataLabel="Email" showLabel={true}>
-            <p className="font-normal text-sm text-gray-500">{row.persona.emailPers}</p>
+            <p className="font-normal text-sm text-gray-500">{row.persona.dniPers}</p>
           </TableCell>
           <TableCell dataLabel="Email" showLabel={true}>
             <p className="font-normal text-sm text-gray-500">{row.persona.telfPers}</p>
           </TableCell>
+          <TableCell dataLabel="Email" showLabel={true}>
+            <p className="font-normal text-sm text-gray-500">{row.persona.emailPers}</p>
+          </TableCell>
           
-          <TableCell dataLabel="Estado" showLabel={true}>
+          {/* <TableCell dataLabel="Estado" showLabel={true}>
             <span className=" space-x-1">
               {row.roles?.map((role, index) => (
                 <span
@@ -39,7 +42,7 @@ function UserTable({ loading, dataHeader, data, handleDelete }) {
                 </span>
               ))}
             </span>
-          </TableCell>
+          </TableCell> */}
           <TableCell>
             <Link
               to={`/auth/master/user/${row.id}/edit`}

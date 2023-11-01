@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar/Index";
+import Navbar from "../../components/Navbar/Index";
 import { useOutletContext } from "react-router-dom";
 import UserTable from "./UserTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -37,16 +37,16 @@ function User() {
       label: "Nombres",
     },
     {
-      key: "email",
-      label: "Email",
+      key: "dni",
+      label: "Dni",
     },
     {
       key: "telefono",
       label: "Telefono",
     },
     {
-      key: "state",
-      label: "Estado",
+      key: "email",
+      label: "email",
     },
     {
       key: "action",
@@ -54,35 +54,7 @@ function User() {
     },
   ];
   const handleDelete = () => { };
-  const data = [
-    {
-      id: 1,
-      name: "Freddy Moya",
-      email: "freddymoya2013@gmail.com",
-      username: "Moya30",
-      telefono: "963495435",
-      roles: [{ name: "Admin" }, { name: "Super Admin" }, { name: "Analista" }],
-    },
-    {
-      id: 2,
-      name: "Rodrigo",
-      email: "rdro@gmail.com",
-      username: "MRodri",
-      telefono: "963495435",
-      roles: [{ name: "Admin" }],
-    },
-    {
-      id: 3,
-      name: "Yenifer",
-      email: "yenifr12@gmail.com",
-      username: "Yenizitah",
-      telefono: "963495435",
-      roles: [{ name: "Admin" }],
-    },
-
-
-  ];
-
+  
   return (
     <>
       <main className="h-full">

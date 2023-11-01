@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from 'axios';
 
 async function AddUser (nombUsua,passUsua,nombPers,appaPers,apmaPers,dniPers,telfPers,emailPers,nombRol) {
